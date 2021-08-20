@@ -27,6 +27,7 @@ public class ChangeColor : MonoBehaviour
     bool RotateZNegButton = false;
     //"Speed" for updating values
     public float ModValue = 0;
+    public float ScaleValue = 0;
 
 
 
@@ -76,11 +77,11 @@ public class ChangeColor : MonoBehaviour
     {
         if(ScalingUp)
         {
-            transform.localScale = transform.localScale * (ModValue + 1);
+            transform.localScale = transform.localScale * (ModValue + ScaleValue);
         }
         else
         {
-            transform.localScale = transform.localScale / (ModValue + 1);
+            transform.localScale = transform.localScale / (ModValue + ScaleValue);
         }
     }
 
